@@ -1223,7 +1223,7 @@ FROM ReviewFeedback
 
 -- Task 1 Part 1 Q 5
 --View showing view the appointment date and time, showing all previous and current appointments for all doctors, 
---and including details of the department (the doctor is associated with), doctor’s specialty and any associate 
+--and including details of the department (the doctor is associated with), doctorÂ’s specialty and any associate 
 --review/feedback given for a doctor.
 --First view
 	DROP VIEW IF EXISTS AllDoctorsAppointmentDetailsView;
@@ -1262,7 +1262,7 @@ SELECT * FROM AllDoctorsAppointmentDetailsView;
 
 -- Task 1 Part 1 Q 5
 --View showing view the appointment date and time, showing all previous and current appointments for all doctors, 
---and including details of the department (the doctor is associated with), doctor’s specialty and any associate 
+--and including details of the department (the doctor is associated with), doctorÂ’s specialty and any associate 
 --review/feedback given for a doctor.
 --Additional views
 DROP VIEW IF EXISTS AllDoctorsAppointmentDetailsView_1;
@@ -1298,7 +1298,7 @@ WHERE
 
 -- Task 1 Part 1 Q 5
 --View showing view the appointment date and time, showing all previous and current appointments for all doctors, 
---and including details of the department (the doctor is associated with), doctor’s specialty and any associate 
+--and including details of the department (the doctor is associated with), doctorÂ’s specialty and any associate 
 --review/feedback given for a doctor.
 --Additional views
 DROP VIEW IF EXISTS AllDoctorsAppointmentDetailsView_2;
@@ -1375,7 +1375,7 @@ END;
 
 
 -- Task 1 Part 1 Q 7
---identify the number of completed appointments with the specialty of doctors as ‘Gastroenterologists’.
+--identify the number of completed appointments with the specialty of doctors as Â‘GastroenterologistsÂ’.
 --count alone
 			SELECT COUNT(*) AS Completed_Appointments
 FROM PastAppointment pa
@@ -1385,7 +1385,7 @@ WHERE dept.specialization = 'Gastroenterology'
     AND pa.status = 'completed';
 
 -- Task 1 Part 1 Q 7
---identify the number of completed appointments with the specialty of doctors as ‘Gastroenterologists’.
+--identify the number of completed appointments with the specialty of doctors as Â‘GastroenterologistsÂ’.
 --count and department specialization
 	SELECT  
     pa.department_id,
@@ -1404,7 +1404,7 @@ GROUP BY
     pa.department_id, dept.specialization;
 
 -- Task 1 Part 1 Q 7
---identify the number of completed appointments with the specialty of doctors as ‘Gastroenterologists’.
+--identify the number of completed appointments with the specialty of doctors as Â‘GastroenterologistsÂ’.
 -- past appointments for doctors having specialization 'Gastroenterology'
 SELECT pa.*
 FROM PastAppointment pa
@@ -1414,7 +1414,7 @@ WHERE dept.specialization = 'Gastroenterology'
   AND pa.status = 'completed';
 
  -- Task 1 Part 1 Q 7
---identify the number of completed appointments with the specialty of doctors as ‘Gastroenterologists’.
+--identify the number of completed appointments with the specialty of doctors as Â‘GastroenterologistsÂ’.
 --past appointments corresponding to count with doctors name 
 SELECT 
     pa.pastappointment_id, pa.patient_id, pa.date, pa.department_id, dept.specialization AS DepartmentSpecialization,
@@ -1433,7 +1433,7 @@ WHERE
     AND pa.status = 'completed';
 
 -- Task 1 Part 1 Q 7
---identify the number of completed appointments with the specialty of doctors as ‘Gastroenterologists’.
+--identify the number of completed appointments with the specialty of doctors as Â‘GastroenterologistsÂ’.
 -- count displayed in message, and results in table. 
 DECLARE @Count INT;
 
@@ -1467,7 +1467,7 @@ WHERE
 PRINT 'The number of completed appointments of doctors having the specialization  ''Gastroenterology'' is ' + CAST(@Count AS VARCHAR);
 
 -- Task 1 Part 1 Q 7
---identify the number of completed appointments with the specialty of doctors as ‘Gastroenterologists’.
+--identify the number of completed appointments with the specialty of doctors as Â‘GastroenterologistsÂ’.
 --stored procedure for same
 CREATE PROCEDURE GetGastroenterologyAppointments
 AS
